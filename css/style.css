@@ -924,6 +924,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   right: 0;
 }
 #contact {
+  width: 100%;
   background: #f7f7f7;
   padding: 80px 0 40px 0;
   }
@@ -1048,6 +1049,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 14px;
 }
 #footer .info {
+  text-align: center;
 	font-size:24px !important;
 }
 #footer .copyright {
