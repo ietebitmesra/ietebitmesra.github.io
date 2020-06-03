@@ -82,6 +82,9 @@
 
             <div class="row">
                 <div class="file-card">
+                  <div class="card-title">
+                    <h4>Click to download files</h4>
+                  </div>
                   <div class="files">
                     <button class="btn m-1">
                     <a href="/images/iete_quiz_2.png" download>
@@ -122,10 +125,45 @@
             <div class="container">
               <div class="container wow fadeInUp mt-5">
               <div class="row justify-content-center">
-                <div class="row justify-content-center">
-                  <h2>submit answer here</h2>
+                  <h2>I cracked it</h2>
                 </div>
+                <div class="row justify-content-center form">
+          <!-- --------------------------------------- -->
+                  <section>
+                    <div class="card text-center answer">
+                      <br>
+                      <form id="form" target="_self" onsubmit="return postToGoogle();" action="" autocomplete="off">
+                          <div class="card-title">
+                            <div class="card-text">
+                              <h3>Name</h3>
+                              <input class="answer-box" type="text" name="entry.1645381990" id="nameField" value="" placeholder="My name" />
+                            </div>
+                            <br>
+                            <div class="card-text">
+                              <h3>Place</h3>
+                              <input class="answer-box" type="text" name="entry.1187785281" id="placeField" value="" placeholder="I live in " />
+                            </div>
+                            <br>
+                            <div class="card-text">
+                              <h3>Link</h3>
+                              <input class="answer-box" type="text" name="entry.1522254940" id="linkField" value="" placeholder="my social Media profile" />
+                            </div>
+                            <br>
+                            <div class="card-text">
+                              <h3>Guess</h3>
+                              <input class="answer-box" type="text" name="entry.1001052172" id="guessField" value="" placeholder="My Guess" />
+                            </div>  
+                            <br>
+                            <div class="btn ">
+                                <input class="btn-outline-light btn btn-lg" type="submit" value="Submit"/>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                    </section>
+         <!-- --------------------------------------- -->
                 </div>
+                <br>
               </div>
             </div>
           </div>
@@ -135,6 +173,7 @@
 
         <!-- this week's challenge over -->
 
+        <br>
         <br>
 
       <div class="container wow fadeInUp">
@@ -151,7 +190,7 @@
               <span>org</span>
               <div class="social">
 			          <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-envelope" title="shiwani.fcc@gmail.com"></i></a>
+                <a href="#"><i class="fa fa-envelope"></i></a>
                 <a href=" #"><i class="fa fa-linkedin"></i></a>
               </div>
             </div>
@@ -165,7 +204,7 @@
               <span>org</span>
               <div class="social">
                 <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-envelope" title="atandrapal@gmail.com"></i></a>
+                <a href="#"><i class="fa fa-envelope"></i></a>
                 <a href="#"><i class="fa fa-linkedin"></i></a>
               </div>
             </div>
@@ -178,7 +217,7 @@
               <span>org</span>
               <div class="social">
                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-envelope" title="jain.divya23041998@gmail.com"></i></a>
+                <a href="#"><i class="fa fa-envelope"></i></a>
                 <a href="#"><i class="fa fa-linkedin"></i></a>
               </div>
             </div>
@@ -244,4 +283,61 @@
   <script src="js/main.js"></script>
 
 </body>
+
+
+<!-- answer submission -->
+<script>
+
+				
+
+
+  function postToGoogle() {
+        var field1 = $("#nameField").val();
+        var field2 = $("#placeField").val();
+        var field3 = $("#linkField").val();
+        var field4 = $("#guessField").val();
+         
+        if(field1 == ""){
+          alert('Please Fill Your name');
+          document.getElementById("nameField").focus();
+          return false;
+        }
+        if(field2 == ""){
+          alert('Please Fill Your place');
+          document.getElementById("nameField").focus();
+          return false;
+        }
+        if(field3 == ""){
+          alert('Please give any social media link');
+          document.getElementById("nameField").focus();
+          return false;
+        }
+        if(field4 == ""){
+          alert('Let us know you guess');
+          document.getElementById("textField").focus();
+          return false;
+        }
+
+        $.ajax({
+
+           
+          url: "https://docs.google.com/forms/d/e/1FAIpQLSeBrsy-5mZqYmzpQUqRAmZmw-es-9kFtkIRA2vXIAadNsd9ig/formResponse?",
+          data: {"entry.1645381990": field1, "entry.1187785281": field2, "entry.1522254940": field3, "entry.1001052172": field4},
+          type: "POST",
+          dataType: "xml",
+          success: function(d)
+          {
+
+          },
+          error: function(x, y, z)
+            {
+              $('.form').hide();
+              alert('Thanks for your participation!');
+              
+            }
+        });
+        return false;
+      }
+</script>
+<!-- answer submission -->
 </html>

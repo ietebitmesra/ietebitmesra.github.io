@@ -846,6 +846,25 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 }
 
+.tech{
+  height: 500px;;
+}
+
+.answer{
+  background-color: #3cd4c0;
+  border-radius: 2ch;
+  width: 100%;
+  padding: 20px;
+  margin: 10px auto;
+}
+
+.answer-box{
+  background-color: #343b40;
+  height: 50px;
+  width: 250px;;
+  color: #ffffff;
+}
+
 .file-card{
   align-content: center;
   text-align: center;
