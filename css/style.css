@@ -849,8 +849,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 .file-card{
   align-content: center;
   text-align: center;
-  margin-left: 30%;
-  margin-right: 30%;
+  /* margin-left: 30%; */
+  /* margin-right: 30%; */
 
 }
 
