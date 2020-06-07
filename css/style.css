@@ -888,6 +888,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   max-width: 100%;
  
 }
+#team .member .pic-poster img {
+  max-width: 22%;
+  
+}
+
 
 #team .member h4 {
   font-weight: 700;
@@ -1168,3 +1173,20 @@ Project Showcase
     margin:40px;
   }
 }
+
+
+#team .container .section-header .dd-title {
+  font-size: 50px;
+}
+
+@media only screen and (max-width: 700px) {
+  #team .member .pic-poster img {
+    max-width: 70%;
+  }
+
+  #team .container .section-header .dd-title {
+    font-size: 40px;
+  }
+
+}
+
