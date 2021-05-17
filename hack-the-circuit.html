@@ -406,10 +406,10 @@
   form.addEventListener("submit", (e) => {
     e.preventDefault(); //prevent default behaviour
     field1 = document.querySelector("#name_fd").value
-    field2 = document.querySelector("#email_fd").value
-    field3 = document.querySelector("#roll_fd").value
+    // field2 = document.querySelector("#email_fd").value
+    // field3 = document.querySelector("#roll_fd").value
     field4 = document.querySelector("#branch_fd").value
-    field5 = document.querySelector("#section_fd").value
+    // field5 = document.querySelector("#section_fd").value
     field6 = document.querySelector("#comp_fd").value
     field7 = document.querySelector("#comp_fdOne").value
     field8 = document.querySelector("#comp_fdTwo").value
@@ -417,12 +417,12 @@
     field10 = document.querySelector("#comp_fdFour").value
     field11 = document.querySelector("#comp_fdFive").value
     field12 = document.querySelector("#social_fd").value
-    field13 = document.querySelector("#wp_fd").value
+    // field13 = document.querySelector("#wp_fd").value
     document.querySelector("#name_fd").value = ""
-    document.querySelector("#email_fd").value = ""
-    document.querySelector("#roll_fd").value = ""
+    // document.querySelector("#email_fd").value = ""
+    // document.querySelector("#roll_fd").value = ""
     document.querySelector("#branch_fd").value = ""
-    document.querySelector("#section_fd").value = ""
+    // document.querySelector("#section_fd").value = ""
     document.querySelector("#comp_fd").value = ""
     document.querySelector("#comp_fdOne").value = ""
     document.querySelector("#comp_fdTwo").value = ""
@@ -430,7 +430,7 @@
     document.querySelector("#comp_fdFour").value = ""
     document.querySelector("#comp_fdFive").value = ""
     document.querySelector("#social_fd").value = ""
-    document.querySelector("#wp_fd").value = ""
+    // document.querySelector("#wp_fd").value = ""
     fetch(url, {
       method: "POST",
       mode: "no-cors",
@@ -463,10 +463,10 @@
     //     var field7 = $("#wp_fd").val();
     //     var field8 = $("#email_fd").val();
     dataToPost.append("entry.798813057", field1);
-    dataToPost.append("entry.1783074761", field2);
-    dataToPost.append("entry.717659587", field3);
+    // dataToPost.append("entry.1783074761", field2);
+    // dataToPost.append("entry.717659587", field3);
     dataToPost.append("entry.888743111", field4);
-    dataToPost.append("entry.928092684", field5);
+    // dataToPost.append("entry.928092684", field5);
     dataToPost.append("entry.72948527", field6);
     dataToPost.append("entry.1511104059", field7);
     dataToPost.append("entry.872802638", field8);
@@ -474,7 +474,7 @@
     dataToPost.append("entry.343111771", field10);
     dataToPost.append("entry.1222003799", field11);
     dataToPost.append("entry.423708554", field12);
-    dataToPost.append("entry.681248711", field13);
+    // dataToPost.append("entry.681248711", field13);
     return dataToPost;
   }
 </script>
