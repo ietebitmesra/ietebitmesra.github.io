@@ -214,11 +214,11 @@
                     <!-- <div class="telephone" style="text-align: left">
                       <label for="name" style="color: black; margin-left: 0; font-weight: bold;">Whatsapp number</label>
                       <input type="text" placeholder="" name="entry.681248711" id="wp_fd" value="" required>
-                    </div>
+                    </div> -->
                     <div class="telephone" style="text-align: left">
                       <label for="email" style="color: black; margin-left: 0; font-weight: bold;">Email Id</label>
-                      <input type="email" placeholder="" name="entry.1783074761" value="" id="email_fd" required>
-                    </div> -->
+                      <input type="email" placeholder="" name="entry.746850382" value="" id="email_fd" required>
+                    </div>
                     <div class="submit">
                       <input type="submit" value="Send Message" id="form_button" />
                     </div>
@@ -406,7 +406,7 @@
   form.addEventListener("submit", (e) => {
     e.preventDefault(); //prevent default behaviour
     field1 = document.querySelector("#name_fd").value
-    // field2 = document.querySelector("#email_fd").value
+    field2 = document.querySelector("#email_fd").value
     // field3 = document.querySelector("#roll_fd").value
     field4 = document.querySelector("#branch_fd").value
     // field5 = document.querySelector("#section_fd").value
@@ -419,7 +419,7 @@
     field12 = document.querySelector("#social_fd").value
     // field13 = document.querySelector("#wp_fd").value
     document.querySelector("#name_fd").value = ""
-    // document.querySelector("#email_fd").value = ""
+    document.querySelector("#email_fd").value = ""
     // document.querySelector("#roll_fd").value = ""
     document.querySelector("#branch_fd").value = ""
     // document.querySelector("#section_fd").value = ""
@@ -463,7 +463,7 @@
     //     var field7 = $("#wp_fd").val();
     //     var field8 = $("#email_fd").val();
     dataToPost.append("entry.798813057", field1);
-    // dataToPost.append("entry.1783074761", field2);
+    dataToPost.append("entry.746850382", field2);
     // dataToPost.append("entry.717659587", field3);
     dataToPost.append("entry.888743111", field4);
     // dataToPost.append("entry.928092684", field5);

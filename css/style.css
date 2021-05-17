@@ -1333,6 +1333,7 @@ select::-ms-expand {
 
 .telephone {
   width: 100%;
+  overflow-wrap: break-word;
 }
 
 textarea {
