@@ -221,28 +221,117 @@
   }
 }
 /* iPads (portrait and landscape) ----------- */
-.thumbnail {
-  /* The image used */
-  background-image: url("../images/detective/screenshot.png");
-  height: 100vh;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  margin-left: 0px;
-  margin-top: 0px;
-  margin-right: 0px;
-  background-repeat: no-repeat;
-}
-
 .pdfs {
   margin: auto;
 }
 
 #footer {
   margin-top: 0;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/detective/screenshot.png) top center;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 200px;
+  left: 0;
+  right: 0;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#hero h1 {
+  margin: 30px 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+#hero h2 {
+  color: #eee;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+#hero .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#hero .btn-get-started:hover {
+  background: #ffa500;
+  border: 2px solid #ffa500;
+  font-weight: 700;
+}
+
+#ab {
+  margin: 150px 10px 10px 10px;
+}
+
+#ex {
+  margin: 150px 10px 10px 10px;
+}
+
+#al {
+  margin: 150px 10px 10px 10px;
+}
+
+#hero .zoom:hover {
+  transform: scale(1.5) !important;
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 /*# sourceMappingURL=david.css.map */
