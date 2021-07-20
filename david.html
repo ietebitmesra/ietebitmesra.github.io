@@ -13,13 +13,51 @@
         <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
         <!-- Bootstrap CSS File -->
         <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
         <!-- Libraries CSS Files -->
         <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link href="lib/animate/animate.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/david.css">
+        <script src="https://kit.fontawesome.com/0ea2351f33.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/animate.css">
+
+        <!-- JS Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+        <script src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
+        <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+    <script>
+      function SubForm (){
+        
+        $.ajax({
+          url:"https://api.apispreadsheets.com/data/15689/",
+          type:"post",
+          data:$("#form").serializeArray(),
+          success: function(){
+            alert("Form Data Submitted :)")
+          },
+          error: function(){
+            alert("There was an error :(")
+          }
+        });
+      }
+
+      
+    </script>
+        
+
+        
+        
     </head>
     <body>
+
+
+
+
         <header id="header">
             <div class="container">
         
@@ -34,28 +72,166 @@
                     <li><a href="Alumni-new.html">Alumni</a></li>
                     <li><a href="workshops.html">Workshops</a></li>
                     <li ><a href="Gallery.html">Gallery</a></li> 
-                    <li class="menu-active"><a href="#">Projects</a></li>
-                    <li><a href="http://google.com">Detective David</a></li>
+                    <li ><a href="Gallery.html">Projects</a></li> 
+                    <li class="menu-active"><a href="#">David</a></li>
                     <!-- <li><a href="hack-the-circuit.html">Hack-The-Circuit</a></li> -->
                     <!-- <li><a href="activity.html">Activity</a></li> -->
                       </ul>
                 </nav><!-- #nav-menu-container -->
             </div>
         </header><!-- #header -->
-        <section id="teamhero">
+        <!-- <section id="teamhero">
+        </section> -->
+
+         
+
+        <main id="mainArea" class="wow">
+          <!-- <h1 class="display-3 dav-heading" style="position: absolute; color: black; z-index: 2; transform: translateY(400px) translatex(20px);">Detective <br> David</h1> -->
+          <!-- POSTER -->
+         <section class="thumbnail img-fluid" style="text-align: center;">
+          <!-- <img class="thumbnail img-fluid" src="images/detective/Clue 1.svg" alt="image"> -->
+          <!-- <h1 class="display-1" style="padding-top: 50vh;" data-tilt data-tilt-perspective="2000">Detective David</h1> -->
+          
+         </section>
+          
         </section>
-        <section id="team">
-            <div class="container wow fadeInUp">
-              <div class="section-header">
-                      <h3 class="section-title">David</h3>
+          <!-- PDFs -->
+          <section class="pdfs container mt-5" id="">
+            <div class="row d-flex justify-content-between pdfs">
+
+              <div style="text-align: center;" class="col mt-2 pdflinks wow animate__fadeInLeft">
+                <a href="http://google.com" style="color: white;" class=""><i class="far fa-file-pdf fa-7x"></i></a>
+                <p style="color:cornsilk; font-size: 20px;" class="mt-2">Instructions</p>
               </div>
+              <div style="text-align: center;" class="col mt-2 pdflinks wow animate__fadeInLeft">
+                <a href="http://google.com" style="color: white;" class=""><i class="far fa-file-pdf fa-7x"></i></a>
+                <p style="color:cornsilk; font-size: 20px;" class="mt-2">Stage-1</p>
+              </div>
+              <div style="text-align: center;" class="col mt-2 pdflinks wow animate__fadeInDown">
+                <a href="http://google.com" style="color: white;" class=""><i class="far fa-file-pdf fa-7x"></i></a>
+                <p style="color:cornsilk; font-size: 20px;" class="mt-2">Stage-2</p>
+              </div>
+              <div style="text-align: center;" class="col mt-2 pdflinks wow animate__fadeInDown">
+                <a href="http://google.com" style="color: white;" class=""><i class="far fa-file-pdf fa-7x"></i></a>
+                <p style="color:cornsilk; font-size: 20px;" class="mt-2">Stage-3</p>
+              </div>
+              <div style="text-align: center;" class="col mt-2 pdflinks wow animate__fadeInRight">
+                <a href="http://google.com" style="color: white;" class=""><i class="far fa-file-pdf fa-7x"></i></a>
+                <p style="color:cornsilk; font-size: 20px;" class="mt-2">Stage-4</p>
+              </div>
+              <div style="text-align: center;" class="col mt-2 pdflinks wow animate__fadeInRight">
+                <a href="http://google.com" style="color: white;" class=""><i class="far fa-file-pdf fa-7x"></i></a>
+                <p style="color:cornsilk; font-size: 20px;" class="mt-2">Stage-5</p>
+              </div>
+              
             </div>
             
+          </section>
+
+          <!-- Form -->
+          
+          
+
+          
+              <div class="player-info wow animate__fadeIn" data-tilt data-tilt-glare="true" data-tilt-perspective="1200">
+              <h5 class="display-5">Form</h5>
+              <form class="form" action="#" name="myform" id="form" onsubmit="SubForm(); reset(); ">
+                <div class="form-field-all">
+                  <p class="field">
+                    <input type="text" name="name" placeholder="Name" required/>
+                    <i class="far fa-user"></i>
+                  </p>
+            
+                  <p class="field">
+                    <input type="text" name="location" placeholder="Location" required/>
+                    <i class="fas fa-location-arrow"></i>
+                  </p>
+                  <p class="field">
+                    <input type="email" name="social" placeholder="Social media" required/>
+                    <i class="fas fa-hashtag"></i>
+                  </p>
+                  <p class="field">
+                    <input type="text" name="answer" placeholder="Final Answer" required/>
+                    <i class="far fa-file-alt"></i>
+                  </p>
+                </div>
                 
-              
-               
-                    
-        </section>      
+                <button type="submit" class="btn btn-primary sub-btn" onclick="">Submit</button>
+              </form>
+
+              </div>
+
+              <!-- <div class="leaderboard">
+                <h1 class="display-3"><i class="fas fa-trophy"></i>Leaderboard</h1>
+
+                <div class="container mb-4" id="lb-cards">
+                  <!-- <h2 class="display-2">Favorite Movies</h2> -->
+                  <div class="row mb-2" style="margin-left: 10px; margin-right: 10px;">
+                    <div class="col-md-4 col-12 wow animate__fadeInUp">
+                      <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                          <div class="col-sm-4 movies-img">
+                            <img src="images/detective/WhatsApp Image 2021-07-20 at 22.26.05.jpeg" alt="..." class="img-fluid" style="border-radius: 20px 20px 20px 20px;">
+                            <a href="" class="lin-card"><i class="fab fa-linkedin fa-2x"></i></a>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">1) Soon</h5>
+                              <!-- <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In tenetur voluptate magni sed ipsum perspiciatis exercitationem doloremque minus debitis neque, laudantium ex explicabo repellat enim possimus nulla quis nam quia.</p> -->
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-12 wow animate__fadeInUp">
+                      <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                          <div class="col-sm-4 movies-img">
+                            <img src="images/detective/WhatsApp Image 2021-07-20 at 22.26.05.jpeg" alt="..." class="img-fluid" style="border-radius: 20px 20px 20px 20px;">
+                            <a href="" class="lin-card"><i class="fab fa-linkedin fa-2x"></i></a>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">2) Soon</h5>
+                              <!-- <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus vitae maiores reprehenderit laudantium laboriosam deleniti voluptatem nulla similique alias perspiciatis quidem, quod maxime eius, voluptate nostrum. Libero, eveniet velit?</p> -->
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-12 wow animate__fadeInUp">
+                      <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                          <div class="col-sm-4 movies-img">
+                            <img src="images/detective/WhatsApp Image 2021-07-20 at 22.26.05.jpeg" alt="..." class="img-fluid" style="border-radius: 20px 20px 20px 20px;">
+                            <a href="" class="lin-card"><i class="fab fa-linkedin fa-2x"></i></a>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">3) Soon</h5>
+                              
+                              <!-- <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel incidunt totam amet, tenetur nobis, reprehenderit quae, suscipit sed dignissimos exercitationem sunt? Sint dolore culpa alias temporibus! Atque, veritatis cupiditate! Itaque.</p> -->
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            
+            
+                </div>
+              </div> -->
+
+             
+        </main>
+
+       
+
+
+          
         <!-- FOOTER-->
         <footer id="footer">
             <div class="footer-top">
@@ -87,139 +263,8 @@
           </footer><!-- #footer -->
 
 
-        <section>
-            <div class="modal modal-showcase" id="modal1">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content showcase-content">
-              
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                      <h4 class="modal-title">Measuring Air Quality using Chaotic Circuit</h4>
-                    </div>
-              
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                      <div class="proj-desp">
-                        The circuit measures the level of CO2 in the classroom environment. 
-                        As the level touches a certain amount of CO2 the sensor gives an 
-                        indication that it has reached a hazardous level and the windows 
-                        should be opened. 
-                        For this, a chaotic circuit is being used to increase the sensitivity 
-                        of the sensor, so that even the slightest increase in the level of CO2 can be detected.
-
-                      </div>  
-                      <div class="container-fluid">
-                        <div class="row">
-                          <img src="./proj-showcase-img/airquality1.jpg" class="card-img proj-img col-lg-6  col-12 mx-auto">
-                          <img src="./proj-showcase-img/airquality2.jpg" class="card-img proj-img col-lg-6  col-12 mx-auto">
-                        </div>
-                      </div>
-                      <div class="credits">
-                        <h4 class="proj-by">By</h4>
-                        <h4 class="proj-by">Harshit Singh</h4>
-                        <h4 class="proj-by">Suchismita Sarkar</h4>
-                        <h4 class="proj-by">Shreyas Agarwal</h4>
-                      </div>  
-                    </div>
-              
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                      <button type="button" onclick="window.open('https://docs.google.com/presentation/d/1muB6iYmOruMGMReRKw_m1JQIrSPzg7yRxLoKbOhKc7s/edit?usp=drivesdk', '_blank');" class="btn btn-success">Link to project</button>
-                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-              
-                  </div>
-                </div>
-              </div>
-        </section>
-        <section>
-            <div class="modal modal-showcase" id="modal2">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content showcase-content">
-              
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                      <h4 class="modal-title w-100">Biometric Attendance System</h4>
-                    </div>
-              
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                      <div class="proj-desp">
-                        Biometric time and attendance systems use the fingerprints of students to verify 
-                        who is actually clocking in and clocking out of class each day. 
-                        The system scans the finger of the student, coordinates are determined 
-                        and then the system maps the endpoints and intersections of the fingerprint. Biometric systems
-                        are easy to use, easy to install and 
-                        track data regarding students for management to analyse.
-                      </div> 
-                        <div class="container-fluid">
-                          <div class="row">
-                            
-                            <img src="./proj-showcase-img/bioattendance1.jpg" class="card-img proj-img col-lg-6  col-12 mx-auto">
-                            <img src="./proj-showcase-img/bioattendance.jpg" class="card-img proj-img col-lg-6  col-12 mx-auto">
-                          </div>
-                        </div>
-                        <div class="credits">
-                          <h4 class="proj-by">By</h4>
-                          <h4 class="proj-by">Shantanu Choudhary </h4>
-                        </div> 
-                    </div>
-              
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                      <button type="button" onclick="window.open('https://drive.google.com/file/d/1KXPh8_9_kliTCRPjfKm8oDO-MMb1IDw2/view', '_blank');" class="btn btn-success">Link to project</button>
-                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-              
-                  </div>
-                </div>
-              </div>
-        </section>
-        <section>
-          <div class="modal modal-showcase" id="modal3">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content showcase-content">
-            
-                  <!-- Modal Header -->
-                  <div class="modal-header">
-                    <h4 class="modal-title">Hardware design for charging Lithium-ion battery for Battery Management System (BMS)</h4>
-                  </div>
-            
-                  <!-- Modal body -->
-                  <div class="modal-body">
-                    <div class="proj-desp">
-                      Simulation of a non-inverting bidirectional converter
-                      for controlling the power flow between the battery and 
-                      350-volt dc-link by operating it in four modes including 
-                      buck and boost operations based on the state of charge of 
-                      battery and requirement of the load.Hardware design of a 
-                      dc-dc converter for charging battery pack of 30 lithium-ion 
-                      cells of 96 volts from a 350 volts dc link.
-
-
-                    </div>  
-                    <div class="container-fluid">
-                      <div class="row">
-                        <img src="./proj-showcase-img/bms1.jpg" class="card-img proj-img proj-img-3 col-lg-6  col-12 mx-auto">
-                        <img src="./proj-showcase-img/bms2.jpg" class="card-img proj-img proj-img-3 col-lg-6  col-12 mx-auto">
-                      </div>
-                    </div>
-                    <div class="credits">
-                      <h4 class="proj-by">By</h4>
-                      <h4 class="proj-by">Sonu Singh</h4>
-                    </div>  
-                  </div>
-            
-                  <!-- Modal footer -->
-                  <div class="modal-footer">
-                    <button type="button" onclick="window.open('https://drive.google.com/open?id=1OpTlexsR9TkcwpS79-z_FXH_wYrt0A5U', '_blank');" class="btn btn-success">Link to project</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                  </div>
-            
-                </div>
-              </div>
-            </div>
-        </section>
+        
+     
         
           <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         
@@ -236,7 +281,30 @@
         
           <!-- Contact Form JavaScript File -->
           <script src="contactform/contactform.js"></script>
+
+          <!-- parallax script -->
+          <!-- <script>
+            var image = document.getElementsByClassName('thumbnail');
+            new simpleParallax(image, {
+              scale: 1.5
+            });
+          </script> -->
+          
+          
+
+
+
+          <!-- WOW JS -->
+          <script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
         
         <script src="js/main.js" ></script>
+
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
     </body>
 </html>
