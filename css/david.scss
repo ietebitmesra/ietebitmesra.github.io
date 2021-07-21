@@ -430,6 +430,10 @@ h1 {
 	font-family: 'Varela Round', sans-serif;
 }
 
+.lin-card-large {
+	right: 20px;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 250px) and (max-device-width: 480px) {
 	.player-info {
@@ -461,6 +465,15 @@ h1 {
 	}
 	.display-4 {
 		font-size: 22px;
+	}
+
+	.lin-card-small {
+		display: block !important;
+		margin-left: 50%;
+		margin-top: 10px;
+	}
+	.lin-card-large {
+		display: none !important;
 	}
 }
 
