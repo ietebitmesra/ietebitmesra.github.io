@@ -161,6 +161,15 @@
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+h1 {
+  font-family: "Zen Tokyo Zoo", cursive;
+  font-size: 50px;
+}
+
+.card-title {
+  font-family: "Varela Round", sans-serif;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 250px) and (max-device-width: 480px) {
   .player-info {
@@ -190,8 +199,8 @@
     display: block !important;
   }
 
-  .display-3 {
-    font-size: 36px;
+  .display-4 {
+    font-size: 22px;
   }
 }
 /* iPads (portrait and landscape) ----------- */
@@ -213,18 +222,6 @@
     transform: none;
     cursor: pointer;
   }
-
-  #hero {
-    height: 60vh;
-  }
-}
-h1 {
-  font-family: "Zen Tokyo Zoo", cursive;
-  font-size: 50px;
-}
-
-.card-title {
-  font-family: "Varela Round", sans-serif;
 }
 
 /*# sourceMappingURL=david.css.map */

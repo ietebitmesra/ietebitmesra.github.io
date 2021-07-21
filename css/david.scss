@@ -413,6 +413,23 @@
 // }
 
 // MEDIA QUERIES
+
+#footer {
+	// position: ;
+	// left: 0;
+	// bottom: 0;
+	// right: 0;
+}
+
+h1 {
+	font-family: 'Zen Tokyo Zoo', cursive;
+	font-size: 50px;
+}
+
+.card-title {
+	font-family: 'Varela Round', sans-serif;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 250px) and (max-device-width: 480px) {
 	.player-info {
@@ -442,8 +459,8 @@
 	#instruction_small {
 		display: block !important;
 	}
-	.display-3 {
-		font-size: 36px;
+	.display-4 {
+		font-size: 22px;
 	}
 }
 
@@ -467,24 +484,4 @@
 			cursor: pointer;
 		}
 	}
-
-	#hero {
-		height: 60vh;
-	}
-}
-
-#footer {
-	// position: ;
-	// left: 0;
-	// bottom: 0;
-	// right: 0;
-}
-
-h1 {
-	font-family: 'Zen Tokyo Zoo', cursive;
-	font-size: 50px;
-}
-
-.card-title {
-	font-family: 'Varela Round', sans-serif;
 }
