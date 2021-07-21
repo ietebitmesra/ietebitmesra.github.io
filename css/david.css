@@ -1,11 +1,10 @@
 #mainArea {
   position: sticky;
   margin: 0;
-  background: linear-gradient(297deg, #4b6cb7, #182848, #33c6a1);
-  background-size: 600% 600%;
-  -webkit-animation: AnimationName 40s ease infinite;
-  -moz-animation: AnimationName 40s ease infinite;
-  animation: AnimationName 40s ease infinite;
+  background: radial-gradient(ellipse farthest-corner at center top, #000000 0%, #414141 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   width: 100%;
   height: 100%;
   margin: 0px;
@@ -14,39 +13,6 @@
   color: #fff;
 }
 
-@-webkit-keyframes AnimationName {
-  0% {
-    background-position: 0% 24%;
-  }
-  50% {
-    background-position: 100% 77%;
-  }
-  100% {
-    background-position: 0% 24%;
-  }
-}
-@-moz-keyframes AnimationName {
-  0% {
-    background-position: 0% 24%;
-  }
-  50% {
-    background-position: 100% 77%;
-  }
-  100% {
-    background-position: 0% 24%;
-  }
-}
-@keyframes AnimationName {
-  0% {
-    background-position: 0% 24%;
-  }
-  50% {
-    background-position: 100% 77%;
-  }
-  100% {
-    background-position: 0% 24%;
-  }
-}
 .player-info {
   position: relative;
   margin-top: 100px;
@@ -76,6 +42,7 @@
   margin-top: 0px;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+  font-family: "Varela Round", sans-serif;
 }
 .player-info:hover {
   transform: skewX(-1deg);
@@ -139,7 +106,7 @@
 }
 
 .pdfs {
-  position: relative;
+  position: static;
   margin: auto;
 }
 
@@ -179,6 +146,21 @@
   margin-left: 50%;
 }
 
+/* iPads (portrait and landscape) ----------- */
+.pdfs {
+  margin: auto;
+}
+.pdfs p {
+  font-family: "Dancing Script", cursive;
+}
+
+#footer {
+  margin-top: 0;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 250px) and (max-device-width: 480px) {
   .player-info {
@@ -198,6 +180,14 @@
   .pdflinks:hover {
     transform: none;
     cursor: pointer;
+  }
+
+  #instruction_large {
+    display: none;
+  }
+
+  #instruction_small {
+    display: block !important;
   }
 }
 /* iPads (portrait and landscape) ----------- */
@@ -219,119 +209,18 @@
     transform: none;
     cursor: pointer;
   }
-}
-/* iPads (portrait and landscape) ----------- */
-.pdfs {
-  margin: auto;
-}
 
-#footer {
-  margin-top: 0;
-}
-
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-#hero {
-  width: 100%;
-  height: 100vh;
-  background: url(../images/detective/screenshot.png) top center;
-  background-size: cover;
-  position: relative;
-}
-
-@media (min-width: 1024px) {
   #hero {
-    background-attachment: fixed;
+    height: 60vh;
   }
 }
-#hero:before {
-  content: "";
-  background: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
+h1 {
+  font-family: "Zen Tokyo Zoo", cursive;
+  font-size: 50px;
 }
 
-#hero .hero-container {
-  position: absolute;
-  bottom: 0;
-  top: 200px;
-  left: 0;
-  right: 0;
-  display: inline;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-#hero h1 {
-  margin: 30px 0 10px 0;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 56px;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-}
-#hero h2 {
-  color: #eee;
-  margin-bottom: 50px;
-  font-size: 24px;
-}
-
-@media (max-width: 768px) {
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
-  }
-}
-#hero .btn-get-started {
-  font-family: "Poppins", sans-serif;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 28px;
-  border-radius: 50px;
-  transition: 0.5s;
-  margin: 10px;
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-#hero .btn-get-started:hover {
-  background: #ffa500;
-  border: 2px solid #ffa500;
-  font-weight: 700;
-}
-
-#ab {
-  margin: 150px 10px 10px 10px;
-}
-
-#ex {
-  margin: 150px 10px 10px 10px;
-}
-
-#al {
-  margin: 150px 10px 10px 10px;
-}
-
-#hero .zoom:hover {
-  transform: scale(1.5) !important;
-  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+.card-title {
+  font-family: "Varela Round", sans-serif;
 }
 
 /*# sourceMappingURL=david.css.map */
