@@ -236,7 +236,7 @@ h1 {
 
   .form input[type=text],
 .form input[type=password] input[type=email] {
-    width: 120px;
+    width: 130px;
   }
 
   .dav-heading {
