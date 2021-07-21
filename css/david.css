@@ -49,9 +49,9 @@
   transition: transform 0.5s ease;
 }
 
-.form .field {
+/* .form .field {
   margin: 0 50px;
-}
+} */
 .form::-webkit-input-placeholder {
   color: #ffffff;
   font-family: "Open Sans";
@@ -111,7 +111,7 @@
 }
 
 .pdflinks {
-  margin-bottom: 100px;
+  margin-bottom: 5px;
 }
 .pdflinks:hover {
   transform: scale(1.5);
@@ -183,7 +183,7 @@ h1 {
   .form input[type=text],
 .form input[type=password],
 .form input[type=email] {
-    width: 130px;
+    width: 100%;
   }
 
   .dav-heading {
@@ -202,16 +202,14 @@ h1 {
   #instruction_small {
     display: block !important;
   }
-	
-.header_large {
+  .header_large {
 		display: none;
 	}
-.header_small {
+  .header_small {
 		display: block !important;
 	}
-
   .display-4 {
-    font-size: 22px;
+    font-size: 25px;
   }
 
   .lin-card-small {
@@ -227,6 +225,17 @@ h1 {
 		display: block;
 		margin-left: 11%;
 	}
+  .winner-img{
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+  }
+  .btn{
+    width: 100%;
+  }
+  .input-field{
+    width: 100%;
+  }
 }
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
