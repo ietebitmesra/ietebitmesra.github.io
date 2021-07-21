@@ -463,6 +463,12 @@ h1 {
 	#instruction_small {
 		display: block !important;
 	}
+	.header_large {
+		display: none;
+	}
+	.header_small {
+		display: block !important;
+	}
 	.display-4 {
 		font-size: 22px;
 	}
@@ -479,6 +485,7 @@ h1 {
 		display: block;
 		margin-left: 11%;
 	}
+	
 }
 
 /* iPads (portrait and landscape) ----------- */
