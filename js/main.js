@@ -128,3 +128,6 @@ jQuery(document).ready(function ($) {
   // custom code
 
 });
+
+        var image = document.getElementsByClassName('thumbnail');
+          new simpleParallax(image);
