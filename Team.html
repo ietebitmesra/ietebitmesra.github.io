@@ -65,10 +65,13 @@
     <!--==========================
       Team Section
     ============================-->
+
     <section id="team">
+
+
       <div class="container wow fadeInUp">
         <div class="section-header">
-          <h3 class="section-title">Executive body</h3>
+          <h3 class="section-title" onClick=toggleExecutives()>Executive body</h3>
         </div>
         <br />
         <br />
@@ -76,15 +79,18 @@
 
 
     <div class="row" id="executive-body"></div>
+    <div class="row" id="former-executive-body"></div>
 
     <script>
-        async function loadYAML() {
-            const response = await fetch('exe_body.yml'); // Ensure 'members.yaml' is in the same directory
+        // This script is used to load yaml data and convert into HTML 
+
+        async function loadYAML(data_file, element_name) {
+            const response = await fetch(data_file); // Ensure 'members.yaml' is in the same directory
             const yamlText = await response.text();
             const data = jsyaml.load(yamlText);
             
             console.log(data)
-            const container = document.getElementById('executive-body');
+            const container = document.getElementById(element_name);
             data.executive_body.members.forEach(member => {
                 const memberHTML = `
                     <div class="col-lg-3 col-md-6">
@@ -105,9 +111,29 @@
             });
         }
 
-        loadYAML();
-    </script>
+        loadYAML('exe_body.yaml','executive-body');
+        loadYAML('former_exe.yaml','former-executive-body');
 
+        function toggleExecutives() {
+            const current = document.getElementById('executive-body');
+            const former = document.getElementById('former-executive-body');
+
+            if (current.style.display === 'none') {
+                current.style.display = 'flex';
+                former.style.display = 'none';
+            } else {
+                current.style.display = 'none';
+                former.style.display = 'flex';
+            }
+        }
+
+        // Initially hide former executives
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById('former-executive-body').style.display = 'none';
+        });
+    </script>
+    <!-- Previous Executive -->
+        
           <!-- <div class="col-lg-3 col-md-6">
             <div class="member">
               <div class="pic"><img src="img/rj.png" alt=""></div>
@@ -272,171 +298,6 @@
               </div>
             </div>
           </div> -->
-          <!--
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Aryan.jpg" alt=""></div>
-              <h4>Aryan</h4>
-              <span>President</span>
-              <div class="social">
-                <a href="mailto:aryanchoudhary047@gmail.com"><i class="fa fa-envelope"
-                    title="aryanchoudhary047@gmail.com"></i></a>
-                <a href="https://www.instagram.com/simplesaviour/"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/aryan-bitm/"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Ansh.jpg" alt=""></div>
-              <h4>Ansh Trivedi </h4>
-              <span>Vice President</span>
-              <div class="social">
-                <a href="mailto:anshtridev@gmail.com"><i class="fa fa-envelope" title="anshtridev@gmail.com"></i></a>
-                <a href="https://www.facebook.com/ansh.trivedi.142035"><i class="fa fa-facebook"></i></a>
-                <a href="https://www.instagram.com/ansh_trivedi007"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/ansh-trivedi-4278b0193"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Anoushka.jpg" alt=""></div>
-              <h4>Anouskha Singh</h4>
-              <span>Vice President</span>
-              <div class="social">
-                <a href="mailto:anoushkasingh.1810@gmail.com"><i class="fa fa-envelope"
-                    title="anoushkasingh.1810@gmail.com"></i></a>
-                <a href="https://instagram.com/anoushka_singh18/"><i class="fa fa-instagram"></i></a>
-                <a href="https://instagram.com/anoushka_singh18"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Aryashreshth.jpg" alt=""></div>
-              <h4>Arya Shresth</h4>
-              <span>General Secretary</span>
-              <div class="social">
-                <a href="mailto:aryashreshth66@gmail.com"><i class="fa fa-envelope"
-                    title="aryashreshth66@gmail.com"></i></a>
-                
-                <a href="https://instagram.com/arya.shreshth?igshid=OGQ5ZDc2ODk2ZA==/"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/arya-shreshth/"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Amitesh.jpg" alt=""></div>
-              <h4>Amitesh kumar Sinha</h4>
-              <span>Joint Secretary</span>
-              <div class="social">
-                <div class="social">
-                  <a href="mailto:amiteshkrsinha@yahoo.com"><i class="fa fa-envelope"
-                      title="amiteshkrsinha@yahoo.com"></i></a>
-                  <a href="https://www.facebook.com/profile.php?id=100011909628206"><i class="fa fa-facebook"></i></a>
-                  <a href="https://instagram.com/amitesh.k.sinha?igshid=MzMyNGUyNmU2YQ%3D%3D&utm_source=qr"><i class="fa fa-instagram"></i></a>
-                  <a href="https://www.linkedin.com/in/amitesh-kumar-sinha-gt69?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Kritika.jpg" alt=""></div>
-              <h4>Kritika Jain</h4>
-              <span>Joint Secretary</span>
-              <div class="social">
-                <a href="mailto:kritikajain1503@gmail.com"><i class="fa fa-envelope"
-                    title="kritikajain1503@gmail.com"></i></a>
-                <a href="https://instagram.com/kritika_jain_kj_?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/kritika-jain-kj?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Mayank.jpg" alt=""></div>
-              <h4>Mayank Giri</h4>
-              <span>Treasurer</span>
-              <div class="social">
-                <a href="mailto:mayankgiri708@gmail.com"><i class="fa fa-envelope"
-                    title="mayankgiri708@gmail.com"></i></a>
-                <a href="https://instagram.com/mayankgiri2110?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa fa-instagram"></i></a>  
-                <a href="https://www.linkedin.com/in/mayank-giri-66b24321b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Kunal.jpg" alt=""></div>
-              <h4>Kunal Roy</h4>
-              <span>Joint Treasurer</span>
-              <div class="social">
-                <a href="mailto:kunalrayd@gmail.com"><i class="fa fa-envelope"
-                    title="kunalrayd@gmail.com"></i></a>
-                    <a href="https://instagram.com/_roy.kunal_?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/roy-kunal"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Akarsh.jpg" alt=""></div>
-              <h4>Akarsh Shresth</h4>
-              <span>Executive Member</span>
-              <div class="social">
-                <a href="mailto:btech10443.21@bitmesra.ac.in"><i class="fa fa-envelope"
-                    title="btech10443.21@bitmesra.ac.in"></i></a>
-                <a href="https://www.instagram.com/aakarshshreshth/"> <i class="fa fa-instagram"></i></a>
-                <a href="http://www.linkedin.com/in/aakarshshreshth"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Anudeep__.jpg" alt=""></div>
-              <h4>Anudeep Kumar</h4>
-              <span>Executive Member</span>
-              <div class="social">
-                <a href="mailto:anewdeep21@gmail.com"><i class="fa fa-envelope"
-                    title="anewdeep21@gmail.com"></i></a>
-                    <a href="https://instagram.com/a.new_deep?igshid=MzNlNGNkZWQ4Mg"><i class="fa fa-instagram"></i></a>    
-                <a href="https://www.linkedin.com/in/anudeep-appie?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-
-         
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Rushil.jpg" alt=""></div>
-              <h4>Rushil Gupta</h4>
-              <span>Executive Member</span>
-              <div class="social">
-                <a href="mailto:rushilguptas2003@gmail.com"><i class="fa fa-envelope"
-                    title="rushilguptas2003@gmail.com"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100075112335707&mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
-                <a href="https://www.linkedin.com/in/rushil-gupta-10810422a/"><i class="fa fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/exuberant_rushil_15/"><i class="fa fa-instagram"></i></a>
-              </div>
-            </div>
-          </div>
-
-          --> 
 
         <!-- <div class="col-lg-3 col-md-6">
             <div class="member">

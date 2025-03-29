@@ -1,0 +1,41 @@
+events:
+  - name: "♟️ Hand & Brain @ Bitotsav"
+    date: "21st March 📅"
+    time: "12:00 - 3:00 PM ⏰"
+    venue: "Room 219 & 220 📍"
+    image: "events/images/HBB.jpg"
+    registration_link: "https://bitotsav.com 🔗"
+    description: "Think you know chess? Think again! Hand & Brain is a battle of teamwork, strategy, and trust. One player (the Brain) calls the piece, while the other (the Hand) makes the move."
+    additional_details:
+      details: "Can you outplay the chaos? Test your synergy and checkmate the competition!"
+      instagram_post: "https://www.instagram.com/p/DHWrAliTmsz/?igsh=MWMxeW1sbmFibWN2aQ== 📸"
+
+  - name: "💻 Byte Buildathon"
+    date: "22nd March 📅"
+    time: null
+    venue: null
+    image: "events/images/BB.jpg"
+    registration_link: "https://forms.gle/R2RV4rGhFgjdAcbP6 🔗"
+    description: "A competition designed to challenge your tech skills. It starts with a quiz round, followed by a hackathon round focused on Web Development, Cybersecurity, and Machine Learning."
+    additional_details:
+      benefits:
+        - "🚀 Gain hands-on experience in cutting-edge technologies."
+        - "🤝 Compete with talented individuals and expand your network."
+        - "🎯 Receive 1-1 mentorship from K21s senior."
+        - "📜 Earn a certificate of participation to enhance your resume."
+      prize: "₹5000 cash prize 🏆"
+
+  - name: "🎤 DevQuest '24"
+    date: "23rd March 📅"
+    image: "events/images/DQ.jpg"
+    time: null
+    venue: null
+    registration_link: "https://forms.gle/4ruGLXQ7eDx5hDqE6 🔗"
+    description: "An inspiring session by the IETE Students' Chapter in collaboration with Rohit Negi, founder of Coder Army. Learn how to overcome challenges and propel your career."
+    additional_details:
+      speaker: "👨‍🏫 Rohit Negi, Founder of Coder Army"
+      highlights:
+        - "📌 Insights from an experienced mentor with 300k+ subscribers on YouTube."
+        - "📚 Practical lessons and career guidance."
+        - "💡 Opportunity to connect and learn from industry experts."
+      speaker_instagram: "https://bit.ly/DevQuest_speaker_ig 📸"
