@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<bDOCTYPE html>
 <html lang="en">
 
 <head>
@@ -25,7 +25,7 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
-
+  <script src="https://cdn.tailwindcss.com"></script>
 
 
 </head>
@@ -49,7 +49,7 @@
           <li class="menu-active"><a href="#hero">Home</a></li>
           <li><a href="Team.html">Team</a></li>
           <li><a href="Alumni-new.html">Alumni</a></li>
-          <li><a href="workshops.html">Workshops</a></li>
+          <li><a href="workshop.html">Workshops</a></li>
           <li><a href="Gallery.html">Gallery</a></li>
           <li><a href="Projects.html">Projects</a></li>
           <!-- <li><a href="Detective-david.html">Detective David</a></li> -->
@@ -78,9 +78,137 @@
 
   <main id="main">
 
+  <!--===================
+         CyberSecurity Event 
+     ======================-->
+
+     <!-- Event Section -->
+        <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rose: 'rgba(255, 0, 127, 0.8)', /* Rose with low opacity */
+                        black: 'rgba(0, 0, 0, 0.8)', /* Black with low opacity */
+                    },
+                    animation: {
+                        'pulse-fast': 'pulse 1s infinite ease-in-out',
+                        'fade-in': 'fade-in 0.8s ease-in-out',
+                        'glow': 'glow 2s infinite ease-in-out',
+                        'slide-in': 'slide-in 1s ease-in-out'
+                    },
+                },
+            },
+        };
+    </script>
+    
+
+    <section class="min-h-screen flex items-center justify-center p-4 bg-gradient-to-b from-[#06061A] via-[#0A1D44] to-[#10256B] text-white font-sans">
+
+        <div class="relative max-w-3xl bg-[#121249] text-white shadow-lg rounded-lg overflow-hidden p-6 md:p-10 border border-blue-500 
+            animate-fade-in animate-glow transform transition-transform duration-300 hover:-translate-y-2">
+            
+            <!-- Header -->
+            <div class="text-center">
+                <h1 class="text-2xl md:text-3xl font-bold uppercase text-blue-300">Speaker Session on Cybersecurity</h1>
+            </div>
+            
+            <!-- Speaker Info -->
+            <div class="mt-4 flex flex-col items-center text-center">
+                <img src="events/images/ARVG.jpeg" alt="Speaker" class="w-32 h-32 rounded-full border-4 border-blue-400 animate-slide-in">
+                <h2 class="mt-2 text-xl font-semibold">Arvind Gupta</h2>
+                <p class="text-blue-200">Business Information & Security Officer, Head of Security, SAP</p>
+            </div>
+            
+            <!-- Event Details -->
+            <div class="mt-6 text-center">
+                <p class="text-lg text-blue-200">📅 <strong>Thursday, April 3, 2025</strong></p>
+                <p class="text-lg text-blue-200">⏰ <strong>5:30 PM - 7:00 PM</strong></p>
+                <p class="text-lg text-blue-200">📍 <strong>CAT Hall</strong></p>
+            </div>
+            
+            <!-- Why Attend -->
+            <div class="mt-6 bg-blue-900/40 p-4 rounded-lg text-left">
+                <h3 class="text-lg font-semibold text-blue-300">✅ Why Attend</h3>
+                <ul class="mt-2 space-y-2 text-blue-100">
+                    <li>🚀 Career in Cyber Security: Current trends</li>
+                    <li>🔒 The two pillars of product development: Quality & Security</li>
+                    <li>🌍 Expand beyond your current role</li>
+                </ul>
+            </div>
+            
+        <!-- Background Animated Shapes -->
+        <div class="absolute inset-0 overflow-hidden">
+            <!-- Black Rectangles in Corners -->
+            <div class="absolute top-0 left-0 w-40 h-40 bg-black opacity-60 rotate-12 animate-float"></div>
+            <div class="absolute bottom-0 right-0 w-40 h-40 bg-black opacity-60 -rotate-12 animate-float delay-500"></div>
+
+
+            <!-- Bluish Floating Bubbles -->
+            <div class="absolute top-10 left-1/4 w-32 h-32 bg-blue-600/40 blur-xl rounded-full animate-bounce"></div>
+            <div class="absolute bottom-10 right-1/4 w-44 h-44 bg-blue-500/50 blur-2xl rounded-full animate-bounce delay-300"></div>
+        </div>
+
+            <!-- Target Audience -->
+            <div class="mt-6 p-4 bg-blue-800/60 rounded-lg text-center">
+                <p class="text-lg font-semibold text-blue-200">Recommended for:</p>
+                <p class="text-blue-100">2nd & 3rd Year Students of ECE, EEE & CSE</p>
+            </div>
+        </div>
+    </section>
+
+    <style>
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(12deg); }
+        50% { transform: translateY(-10px) rotate(12deg); }
+    }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); opacity: 0.8; }
+            50% { transform: translateY(-15px); opacity: 1; }
+        }
+
+        .animate-float {
+            animation: float 5s infinite ease-in-out;
+        }
+
+        .animate-bounce {
+            animation: bounce 6s infinite ease-in-out;
+        }
+
+    @keyframes fade-in {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slide-in {
+        from { opacity: 0; transform: translateX(-30px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes glow {
+        0%, 100% { box-shadow: 0px 0px 10px 0px rgba(0, 170, 255, 0.5); }
+        50% { box-shadow: 0px 0px 20px 5px rgba(0, 170, 255, 0.7); }
+    }
+
+    .animate-fade-in {
+        animation: fade-in 0.8s ease-in-out;
+    }
+
+    .animate-slide-in {
+        animation: slide-in 1s ease-in-out;
+    }
+
+    .animate-glow {
+        animation: glow 2s infinite ease-in-out;
+    }
+
+    </style>
     <!--==========================
       About Us Section
     ============================-->
+
     <section id="about">
       <div class="container">
         <div class="row about-container">
@@ -144,211 +272,745 @@
       </div>
     </section>
 
-    <!--==========================
-      Team Section
-    ============================-->
-    <section id="team">
-      <div class="container wow fadeInUp">
-        <div class="section-header">
-          <h3 class="section-title">Executive body</h3>
-          <p class="section-description">An inspiring faculty and a dedicated team of members.</p>
-        </div>
-        <div class="row">
-          <div class="col-md-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/DSW.jpg" alt=""></div>
-              <h4>Dr. Anand Kumar Sinha</h4>
-              <span>Dean Student Welfare</span>
-            </div>
+<!--==========================
+  Team Section
+============================-->
+<section id="team">
+  <div class="container wow fadeInUp">
+    <div class="section-header">
+      <h3 class="section-title">Executive body</h3>
+      <p class="section-description">An inspiring faculty and a dedicated team of members.</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-3 col-md-6">
+        <div class="member">
+          <div class="pic flex justify-center">
+            <img src="img/DSW.jpg" alt="Dean Student Welfare" class="w-40 h-40 object-cover rounded-full border-4 border-blue-400 mx-auto">
           </div>
-
-          <div class="col-md-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/gsgk.jpg" alt=""></div>
-              <h4>Dr. Gauri Shanker Gupta</h4>
-              <span>Faculty Advisor</span>
-            </div>
-          </div>
+          <h4>Dr. Bhaskar Karn</h4>
+          <span>Dean Student Welfare</span>
         </div>
-        <br />
-        <br />
-        <br />
-        <div class="row">
+      </div>
 
-          <div class="col-lg-4 col-md-6">
+      <div class="col-md-3 col-md-6">
+        <div class="member">
+          <div class="pic flex justify-center">
+            <img src="img/gsgk.jpg" alt="Faculty Advisor" class="w-40 h-40 object-cover rounded-full border-4 border-blue-400 mx-auto">
+          </div>
+          <h4>Dr. Gauri Shanker Gupta</h4>
+          <span>Faculty Advisor</span>
+        </div>
+      </div>
+    </div>
+    
+    <br />
+    <br />
+    <br />
+
+
+        <div class="row">
+   <div class="row" id="executive-body">
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="member">
+                                <div class="pic"><img src="Assets 2023/Anoushka.jpg" alt=""></div>
+                                <h4>Anouskha Singh</h4>
+                                <span>President</span>
+                                <div class="social">
+
+                                    <a href="https://instagram.com/anoushka_singh18"><i class="fa fa-instagram"></i></a>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-lg-3 col-md-6">
+                        <div class="member">
+                            <div class="pic"><img src="exe_K22/SG.jpeg" alt=""></div>
+                            <h4>Sushant Gupta</h4>
+                            <span>General Secretary</span>
+                            <div class="social">
+                                <a href="mailto:sushantgupta@outlook.com"><i class="fa fa-envelope" title="sushantgupta@outlook.com"></i></a>
+                                <a href="https://www.instagram.com/sushantgupta.626"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/sushant-gupta-0aab48255"><i class="fa fa-linkedin"></i></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-lg-3 col-md-6">
+                        <div class="member">
+                            <div class="pic"><img src="exe_K22/AKC.jpeg" alt=""></div>
+                            <h4>Akansha Chouhan</h4>
+                            <span>Vice President</span>
+                            <div class="social">
+                                <a href="mailto:akanshachouhan2004.06@gmail.com"><i class="fa fa-envelope" title="akanshachouhan2004.06@gmail.com"></i></a>
+                                <a href="https://www.instagram.com/ac_huehuehue"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/akansha-chouhan-a0a7451aa"><i class="fa fa-linkedin"></i></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-lg-3 col-md-6">
+                        <div class="member">
+                            <div class="pic"><img src="exe_K22/SH.jpg" alt=""></div>
+                            <h4>Sougata Halder</h4>
+                            <span>Joint Secretary</span>
+                            <div class="social">
+                                <a href="mailto:halderdk33@gmail.com"><i class="fa fa-envelope" title="halderdk33@gmail.com"></i></a>
+                                <a href="https://www.instagram.com/sougata_halder12"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/sougata-halder-b76b94134/"><i class="fa fa-linkedin"></i></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-lg-3 col-md-6">
+                        <div class="member">
+                            <div class="pic"><img src="exe_K22/SV.jpg" alt=""></div>
+                            <h4>Shubhi Verma</h4>
+                            <span>Co-Director</span>
+                            <div class="social">
+                                <a href="mailto:shubhiv612@gmail.com"><i class="fa fa-envelope" title="shubhiv612@gmail.com"></i></a>
+                                <a href="https://www.instagram.com/shubhiiiverma"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/shubhi-verma12"><i class="fa fa-linkedin"></i></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-lg-3 col-md-6">
+                        <div class="member">
+                            <div class="pic"><img src="exe_K22/AKT.jpeg" alt=""></div>
+                            <h4>Akash Kumar Tiwary</h4>
+                            <span>Coordinator</span>
+                            <div class="social">
+                                <a href="mailto:1akashtiwary@gmail.com"><i class="fa fa-envelope" title="1akashtiwary@gmail.com"></i></a>
+                                <a href="https://www.instagram.com/akashdidwhat"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/akashkt10172"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.facebook.com/updatesbyakash"><i class="fa fa-facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-lg-3 col-md-6">
+                        <div class="member">
+                            <div class="pic"><img src="exe_K22/AS.jpeg" alt=""></div>
+                            <h4>Aditya Srivastava</h4>
+                            <span>Joint Treasurer</span>
+                            <div class="social">
+                                <a href="mailto:sriaditya16@gmail.com"><i class="fa fa-envelope" title="sriaditya16@gmail.com"></i></a>
+                                <a href="https://www.instagram.com/adiedits_1816"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/aditya-srivastava-12476524a/"><i class="fa fa-linkedin"></i></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-lg-3 col-md-6">
+                        <div class="member">
+                            <div class="pic"><img src="exe_K22/SS.jpeg" alt=""></div>
+                            <h4>Satakshi Sinha</h4>
+                            <span>Design Coordinator</span>
+                            <div class="social">
+                                <a href="mailto:btech10198.22@bitmesra.ac.in"><i class="fa fa-envelope" title="btech10198.22@bitmesra.ac.in"></i></a>
+                                <a href="https://www.instagram.com/shatakshi2608/"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/shatakshi-singh-29538a256/"><i class="fa fa-linkedin"></i></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-lg-3 col-md-6">
+                        <div class="member">
+                            <div class="pic"><img src="exe_K22/AR.jpeg" alt=""></div>
+                            <h4>Ashish Ranjan</h4>
+                            <span>Event Coordinator</span>
+                            <div class="social">
+                                
+                                
+                                <a href="https://www.linkedin.com/in/aashish-ranjan-45280b266/"><i class="fa fa-linkedin"></i></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+    <!-- Previous Executive -->
+        
+          <!-- <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="Assets 2023/Aryan.jpg" alt=""></div>
-              <h4>Aryan</h4>
+              <div class="pic"><img src="img/rj.png" alt=""></div>
+              <h4>Ravish Jain</h4>
               <span>President</span>
               <div class="social">
-                <div class="social">
-                  <a href="mailto:aryanchoudhary047@gmail.com"><i class="fa fa-envelope"
-                      title="aryanchoudhary047@gmail.com"></i></a>
-                  <a href="https://www.instagram.com/simplesaviour/"><i
-                      class="fa fa-instagram"></i></a>
-                  <a href="https://www.facebook.com/profile.php?id=100006714703435"><i class="fa fa-facebook"></i></a>
-                  <a href="https://www.linkedin.com/in/aryan-bitm/"><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Ansh.jpg" alt=""></div>
-              <h4>Ansh Trivedi </h4>
-              <span>Vice President</span>
-              <div class="social">
-                <a href="mailto:anshtridev@gmail.com"><i class="fa fa-envelope" title="anshtridev@gmail.com"></i></a>
-                <a href="https://www.facebook.com/ansh.trivedi.142035"><i class="fa fa-facebook"></i></a>
-                <a href="https://www.instagram.com/ansh_trivedi007"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/ansh-trivedi-4278b0193"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Anoushka.jpg" alt=""></div>
-              <h4>Anouskha Singh</h4>
-              <span>Vice President</span>
-              <div class="social">
-                <a href="mailto:anoushkasingh.1810@gmail.com"><i class="fa fa-envelope"
-                    title="anoushkasingh.1810@gmail.com"></i></a>
-                <a href="https://instagram.com/anoushka_singh18"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/anoushka-singh-3a0008232"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-12">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Aryashreshth.jpg" alt=""></div>
-              <h4>Arya Shresth</h4>
-              <span>General Secretary</span>
-              <div class="social">
-                <a href="mailto:aryashreshth66@gmail.com"><i class="fa fa-envelope"
-                    title="aryashreshth66@gmail.com"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href="https://instagram.com/arya.shreshth?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/arya-shreshth/"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Amitesh.jpg" alt=""></div>
-              <h4>Amitesh Kumar Sinha</h4>
-              <span>Joint Secretary</span>
-              <div class="social">
-                <div class="social">
-                  <a href="amiteshkrsinha@yahoo.com"><i class="fa fa-envelope"
-                      title="amiteshkrsinha@yahoo.com"></i></a>
-                  
-                  <a href="https://instagram.com/amitesh.k.sinha?igshid=MzMyNGUyNmU2YQ%3D%3D&utm_source=qr"><i class="fa fa-instagram"></i></a>
-                  <a href="https://www.linkedin.com/in/amitesh-kumar-sinha-gt69?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Kritika.jpg" alt=""></div>
-              <h4>Kritika Jain</h4>
-              <span>Joint Secretary</span>
-              <div class="social">
-                <a href="mailto:kritikajain1503@gmail.com"><i class="fa fa-envelope"
-                    title="kritikajain1503@gmail.com"></i></a>
-                <a href="https://instagram.com/kritika_jain_kj_?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/kritika-jain-kj?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Mayank.jpg" alt=""></div>
-              <h4>Mayank Giri</h4>
-              <span>Treasurer</span>
-              <div class="social">
-                <a href="mailto:mayankgiri708@gmail.com"><i class="fa fa-envelope"
-                    title="mayankgiri708@gmail.com"></i></a>
-                <a href="https://instagram.com/mayankgiri2110?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/mayank-giri-66b24321b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="Assets 2023/Kunal.jpg" alt=""></div>
-              <h4>Kunal Roy</h4>
-              <span>Joint Treasurer</span>
-              <div class="social">
-                <a href="mailto:kunalrayd@gmail.com"><i class="fa fa-envelope"
-                    title="kunalrayd@gmail.com"></i></a>
                 <a href=""><i class="fa fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/roy-kunal"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/ravish.jain.775"><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
               </div>
             </div>
           </div>
 
+
+
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/VR.jpg" alt=""></div>
+              <h4>Vathsalya Reddy</h4>
+              <span>Joint President</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/VS.jpg" alt=""></div>
+              <h4>Vishesh Sajgotra</h4>
+              <span>Vice President</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href="https://www.facebook.com/vishesh.sajgotra"><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/V.jpg" alt=""></div>
+              <h4>Vivek Shinde</h4>
+              <span>Vice President</span>
+              <div class="social">
+                <a href="mailto:vivekshinde0007@gmail.com"><i class="fa fa-envelope"
+                    title="vivekshinde0007@gmail.com"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/SON.jpg" alt=""></div>
+              <h4>Sonali Chaurasia</h4>
+              <span>Chapter Director</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/MJ1.jpg" alt=""></div>
+              <h4>Meet Joshi</h4>
+              <span>Chapter Director</span>
+              <div class="social">
+                <a href="mailto:meetjoshi202@gmail.com "><i class="fa fa-envelope"
+                    title="meetjoshi202@gmail.com"></i></a>
+                <a href="https://www.instagram.com/Meetjoshi20"><i class="fa fa-instagram"
+                    title="instagram.com/Meetjoshi20"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/NS.jpg" alt=""></div>
+              <h4>Neeraj Sharma</h4>
+              <span>Web Master/Design Head</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/AW.jpg" alt=""></div>
+              <h4>Awanika</h4>
+              <span>Technical Head (Data Science)</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/DE.jpg" alt=""></div>
+              <h4>Dev Gupta</h4>
+              <span>Technical Head (Electrical)</span>
+              <div class="social">
+                <a href="mailto:devgupta.130@gmail.com"><i class="fa fa-envelope"
+                    title="devgupta.130@gmail.com"></i></a>
+                <a href="https://m.facebook.com/profile.php?ref=bookmarks"><i class="fa fa-facebook"></i></a>
+                <a href="www.linkedin.com/in/dev-g-gupta"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/HE.jpg" alt=""></div>
+              <h4>Hemanth Pattisappu</h4>
+              <span>Events Head</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/PA.jpg" alt=""></div>
+              <h4>Pratyush Agarwal</h4>
+              <span>Manager (Alumni Relations)</span>
+              <div class="social">
+                <a href="mailto:nishuagarwal3110@gmail.com"><i class="fa fa-envelope"
+                    title="nishuagarwal3110@gmail.com"></i></a>
+                <a href="https://www.facebook.com/nishu.agarwal.5059"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/pratyush-agarwal-998599161"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/MA.jpg" alt=""></div>
+              <h4>Manish Kumar Beck</h4>
+              <span>Senior Executive Member</span>
+              <div class="social">
+                <a href="mailto:kumarbeckmanish@gmail.com"><i class="fa fa-envelope"
+                    title="kumarbeckmanish@gmail.com"></i></a>
+                <a href="https://www.facebook.com/manish.kumarbeck.7"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/manish-kumar-beck-6a0a65161"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div> -->
+
+        <!-- <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="./img/Zeeshan.jpeg" alt=""></div>
+              <h4>Zeeshan Equbal</h4>
+              <span>Treasurer </span>
+              <div class="social">
+                <a href="mailto:equbalzeeshan@gmail.com"><i class="fa fa-envelope"
+                    title="equbalzeeshan@gmail.com"></i></a>
+                <a href="https://twitter.com/EqubalZeeshan"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/zean7/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="./img/ANKIT.jpeg" alt=""></div>
+              <h4>Ankit Kumar</h4>
+              <span>Joint Treasurer </span>
+              <div class="social">
+                <a href="mailto:ankit3030anni.me2@gmail.com"><i class="fa fa-envelope"
+                    title="ankit3030anni.me2@gmail.com"></i></a>
+                <a href="https://www.instagram.com/an_kit1862/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/ankit-kumar-b87a69192"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="./img/vipin.jfif" alt=""></div>
+              <h4>VIPIN KUMAR</h4>
+              <span>TECHNICAL COORDINATOR </span>
+              <div class="social">
+                <a href="mailto:anubhagat5667@gmail.com"><i class="fa fa-envelope"
+                    title="anubhagat5667@gmail.com"></i></a>
+                <a href="https://m.facebook.com/profile.php?id=100010938459740&refsrc=deprecated&_rdr"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/vipin-kumar-a791781b3"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="./img/anushk.jfif" alt=""></div>
+              <h4>ANUSHK</h4>
+              <span>EVENT COORDINATOR </span>
+              <div class="social">
+                <a href="mailto:be10496.19@bitmesra.ac.in"><i class="fa fa-envelope"
+                    title="be10496.19@bitmesra.ac.in"></i></a>
+                <a href="https://www.instagram.com/anushkanushk/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/anushkanushk/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="./img/ss.jpg" alt=""></div>
+              <h4>SUBHAM SURANA </h4>
+              <span>WORKSHOP COORDINATOR</span>
+              <div class="social">
+                <a href="mailto:btech10583.19@bitmesra.ac.in"><i class="fa fa-envelope"
+                    title="btech10583.19@bitmesra.ac.in"></i></a>
+                <a href="https://www.facebook.com/neklaustares.tPtwP/"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/subham-surana-born-to-rule/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="./img/bhawana.jpg" alt=""></div>
+              <h4>BHAWANA SINGH</h4>
+              <span>PUBLICITY & COVERAGE COORDINATOR</span>
+              <div class="social">
+                <a href="mailto:bawanasinghk287@gmail.com"><i class="fa fa-envelope"
+                    title="bawanasinghk287@gmail.com"></i></a>
+                <a href="https://www.instagram.com/_bhawana.singh_"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/mwlite/in/bhawana-singh-345b6919a"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
 
           
 
-          <div class="col-lg-4 col-md-6">
+          
+          <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="Assets 2023/Akarsh.jpg" alt=""></div>
-              <h4>Akarsh Shresth</h4>
-              <span>Executive Member</span>
+              <div class="pic"><img src="./img/hm.jfif" alt=""></div>
+              <h4>HARSH MISHRA</h4>
+              <span>LOGISTIC COORDINATOR</span>
               <div class="social">
-                <a href="mailto:btech10443.21@bitmesra.ac.in
-                "><i class="fa fa-envelope"
-                    title="btech10443.21@bitmesra.ac.in
-                    "></i></a>
-                    <a href="https://www.instagram.com/aakarshshreshth/"><i class="fa fa-instagram"></i></a>
-                <a href="http://www.linkedin.com/in/aakarshshreshth"><i class="fa fa-linkedin"></i></a>
+                <a href="mailto:harshnoni123@gmail.com"><i class="fa fa-envelope"
+                    title="harshnoni123@gmail.com"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/harsh-mishra-a909441b1"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="./img/skp.jpg" alt=""></div>
+              <h4>SAKETH KUMAR PABBA</h4>
+              <span>EXECUTIVE MEMBER </span>
+              <div class="social">
+                <a href="mailto:sakpab8@gmail.com"><i class="fa fa-envelope"
+                    title="sakpab8@gmail.com"></i></a>
+                <a href="https://www.instagram.com/sak_eth.exe/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/saketh-pabba-783a94194/"><i class="fa fa-linkedin"></i></a>
               </div>
             </div>
           </div>
 
 
-
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="Assets 2023/Anudeep__.jpg" alt=""></div>
-              <h4>Anudeep Kumar</h4>
-              <span>Executive Member</span>
+              <div class="pic"><img src="./img/ad.png" alt=""></div>
+              <h4>ADITYA KUMAR DUBEY</h4>
+              <span>EXECUTIVE MEMBER</span>
               <div class="social">
-                <a href="mailto:anewdeep21@gmail.com"><i class="fa fa-envelope"
-                    title="anewdeep21@gmail.com"></i></a>
-                <a href="https://instagram.com/a.new_deep?igshid=MzNlNGNkZWQ4Mg"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/anudeep-appie?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin"></i></a>
+                <a href="mailto:dubeyaditya5726@gmail.com"><i class="fa fa-envelope"
+                    title="dubeyaditya5726@gmail.com"></i></a>
+                <a href="https://www.instagram.com/dubeyaditya6232/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/dubeyaditya6232/"><i class="fa fa-linkedin"></i></a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="Assets 2023/Rushil.jpg" alt=""></div>
-              <h4>Rushil Gupta</h4>
-              <span>Executive Member</span>
+              <div class="pic"><img src="./img/Setika.png" alt=""></div>
+              <h4>SETIKA RAJ</h4>
+              <span>EXECUTIVE MEMBER </span>
               <div class="social">
-                <a href="mailto:rushilguptas2003@gmail.com"><i class="fa fa-envelope" title="rushilguptas2003@gmail.com"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100075112335707&mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
-                <a href="https://www.instagram.com/exuberant_rushil_15/"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/rushil-gupta-10810422a/"><i class="fa fa-linkedin"></i></a>
+                <a href="mailto:setikaraj@gmail.com"><i class="fa fa-envelope"
+                    title="setikaraj@gmail.com"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/setika-raj-6559331b3/"><i class="fa fa-linkedin"></i></a>
               </div>
             </div>
           </div>
-        </div>
 
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="./img/ak.jfif" alt=""></div>
+              <h4>APURV KIRTI</h4>
+              <span>EXECUTIVE MEMBER </span>
+              <div class="social">
+                <a href="mailto:apurvkirti.jay@gmail.com"><i class="fa fa-envelope"
+                    title="apurvkirti.jay@gmail.com"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/apurv-kirti-ba8a931aa"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="./img/PRAJWAL.jpg" alt=""></div>
+              <h4>PRAJWAL MATUKUMALLI</h4>
+              <span>EXECUTIVE MEMBER </span>
+              <div class="social">
+                <a href="mailto:matukumalliprajwal@gmail.com"><i class="fa fa-envelope"
+                    title="matukumalliprajwal@gmail.com"></i></a>
+                <a href="https://www.instagram.com/@matukumalliprajwal"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/prajwal-matukumalli"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="./images/fahim.jpeg" alt=""></div>
+              <h4>FAHIM CHOUDHURY</h4>
+              <span>EXECUTIVE MEMBER </span>
+              <div class="social">
+                <a href="mailto:#"><i class="fa fa-envelope"
+                    title="#"></i></a>
+                <a href="https://www.instagram.com/fahimychoudhury/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/fahim-choudhury-8456521a0/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="./img/SANJAY KUMAR MANDAL.png" alt=""></div>
+              <h4>SANJAY KUMAR MANDAL</h4>
+              <span>EXECUTIVE MEMBER </span>
+              <div class="social">
+                <a href="mailto:#"><i class="fa fa-envelope"
+                    title="#@gmail.com"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100037997836571"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/sanjay-kumar-mandal-24b5551a1/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="./img/pb.jfif" alt=""></div>
+              <h4>PRATHAM BIST</h4>
+              <span>EXECUTIVE MEMBER </span>
+              <div class="social">
+                <a href="mailto:bist.pratham@gmail.com"><i class="fa fa-envelope"
+                    title="bist.pratham@gmail.com"></i></a>
+                <a href="https://www.instagram.com/pratham_bist_/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/prathambist/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div> -->
+
+
+
+
+        <!--           <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="#" alt=""></div>
+              <h4>Vipin Kumar</h4>
+              <span>Technical Coordinator </span>
+              <div class="social">
+                <a href="mailto:anubhagat5667@gmail.com"><i class="fa fa-envelope"
+                    title="anubhagat5667@gmail.com"></i></a>
+                <a href="https://m.facebook.com/profile.php?id=100010938459740&refsrc=deprecated&_rdr"><i
+                    class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/vipin-kumar-a791781b3"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="#" alt=""></div>
+              <h4>Anushk</h4>
+              <span>Event Coordinator </span>
+              <div class="social">
+                <a href="mailto:be10496.19@bitmesra.ac.in"><i class="fa fa-envelope"
+                    title="be10496.19@bitmesra.ac.in"></i></a>
+                <a href="https://www.instagram.com/anushkanushk/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/anushkanushk/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="#" alt=""></div>
+              <h4>Subham Surana</h4>
+              <span>Workshop Coordinator </span>
+              <div class="social">
+                <a href="mailto:btech10583.19@bitmesra.ac.in"><i class="fa fa-envelope"
+                    title="btech10583.19@bitmesra.ac.in"></i></a>
+                <a href="https://www.facebook.com/neklaustares.tPtwP/"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/subham-surana-born-to-rule/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="#" alt=""></div>
+              <h4>Bhawana Singh</h4>
+              <span>Publicity &coverage coordinator </span>
+              <div class="social">
+                <a href="mailto:bawanasinghk287@gmail.com"><i class="fa fa-envelope"
+                    title="bawanasinghk287@gmail.com"></i></a>
+                <a href="https://www.instagram.com/_bhawana.singh_/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/mwlite/in/bhawana-singh-345b6919a"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="#" alt=""></div>
+              <h4>Harsh Mishra</h4>
+              <span>Logistic coordinator </span>
+              <div class="social">
+                <a href="mailto:harshnoni123@gmail.com"><i class="fa fa-envelope"
+                    title="harshnoni123@gmail.com"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/harsh-mishra-a909441b1"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="#" alt=""></div>
+              <h4>Apurv kirti</h4>
+              <span>Executive Member </span>
+              <div class="social">
+                <a href="mailto:apurvkirti.jay@gmail.com"><i class="fa fa-envelope"
+                    title="apurvkirti.jay@gmail.com"></i></a>
+                <a href="https://www.instagram.com/apurvkirti.jay/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/apurv-kirti-ba8a931aa"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="#" alt=""></div>
+              <h4>Saketh Kumar Pabba </h4>
+              <span>Executive Member </span>
+              <div class="social">
+                <a href="mailto:sakpab8@gmail.com"><i class="fa fa-envelope" title="sakpab8@gmail.com"></i></a>
+                <a href="https://www.instagram.com/sak_eth.exe/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/saketh-pabba-783a94194/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="#" alt=""></div>
+              <h4>Aditya Kumar Dubey</h4>
+              <span>Executive Member </span>
+              <div class="social">
+                <a href="mailto:dubeyaditya5726@gmail.com"><i class="fa fa-envelope"
+                    title="dubeyaditya5726@gmail.com"></i></a>
+                <a href="https://www.instagram.com/dubeyaditya6232/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/dubeyaditya6232/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="#" alt=""></div>
+              <h4>Prajwal Matukumalli</h4>
+              <span>Executive Member </span>
+              <div class="social">
+                <a href="mailto:matukumalliprajwal@gmail.com"><i class="fa fa-envelope"
+                    title="matukumalliprajwal@gmail.com"></i></a>
+                <a href="https://www.instagram.com/@matukumalliprajwal"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/prajwal-matukumalli"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="#" alt=""></div>
+              <h4>Setika Raj</h4>
+              <span>Executive Member </span>
+              <div class="social">
+                <a href="mailto:#"><i class="fa fa-envelope" title="#"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/setika-raj-6559331b3/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="#" alt=""></div>
+              <h4>Sanjay Kumar Mandal</h4>
+              <span>Executive Member </span>
+              <div class="social">
+                <a href="mailto:pratiksingh1905@gmail.com"><i class="fa fa-envelope"
+                    title="pratiksingh1905@gmail.com"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/sanjay-kumar-mandal-24b5551a1/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="#" alt=""></div>
+              <h4>Fahim Choudhury</h4>
+              <span>Executive Member </span>
+              <div class="social">
+                <a href="mailto:#"><i class="fa fa-envelope" title="#"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="#" alt=""></div>
+              <h4>Pratham Bist</h4>
+              <span>Executive Member </span>
+              <div class="social">
+                <a href="mailto:bist.pratham@gmail.com"><i class="fa fa-envelope"
+                    title="bist.pratham@gmail.com"></i></a>
+                <a href="https://www.instagram.com/pratham_bist_/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/prathambist/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div> -->
+      </div>
+    </div></section>
 
 
 
@@ -415,7 +1077,6 @@
       </div>
     </section>   -->
         <!-- #team -->
-
         <!--==========================
       Contact Section
     ============================ -->

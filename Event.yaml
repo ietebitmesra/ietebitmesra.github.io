@@ -1,0 +1,112 @@
+events:
+  - name: "♟️ Hand & Brain @ Bitotsav"
+    date: "2025-03-21"
+    time: "12:00 - 3:00 PM"
+    venue: "Room 219 & 220"
+    image: "events/images/HBB.jpeg"
+    registration_link: "https://bitotsav.com"
+    description: "Think you know chess? Think again! Hand & Brain is a battle of teamwork, strategy, and trust. One player (the Brain) calls the piece, while the other (the Hand) makes the move."
+    additional_details:
+      details: "Can you outplay the chaos? Test your synergy and checkmate the competition!"
+      instagram_post: "https://www.instagram.com/p/DHWrAliTmsz/?igsh=MWMxeW1sbmFibWN2aQ=="
+
+  - name: "💻 Byte Buildathon"
+    date: "2025-03-22"
+    time: null
+    venue: null
+    image: "events/images/BB.jpeg"
+    registration_link: "https://forms.gle/R2RV4rGhFgjdAcbP6"
+    description: "A competition designed to challenge your tech skills. It starts with a quiz round, followed by a hackathon round focused on Web Development, Cybersecurity, and Machine Learning."
+    additional_details:
+      benefits:
+        - "Gain hands-on experience in cutting-edge technologies."
+        - "Compete with talented individuals and expand your network."
+        - "Receive 1-1 mentorship from K21s senior."
+        - "Earn a certificate of participation to enhance your resume."
+      prize: "₹5000 cash prize"
+
+  - name: "🎤 DevQuest '24"
+    date: "2025-03-23"
+    image: "events/images/DQ.jpeg"
+    time: null
+    venue: null
+    registration_link: "https://forms.gle/4ruGLXQ7eDx5hDqE6"
+    description: "An inspiring session by the IETE Students' Chapter in collaboration with Rohit Negi, founder of Coder Army. Learn how to overcome challenges and propel your career."
+    additional_details:
+      speaker: "Rohit Negi, Founder of Coder Army"
+      highlights:
+        - "Insights from an experienced mentor with 300k+ subscribers on YouTube."
+        - "Practical lessons and career guidance."
+        - "Opportunity to connect and learn from industry experts."
+      speaker_instagram: "https://bit.ly/DevQuest_speaker_ig"
+  - name: "🔐 Speaker Session on Cybersecurity"
+    date: "2025-04-03"
+    time: "17:30 - 19:00"
+    venue: "CAT Hall"
+    image: "events/images/SSCS.jpeg"
+    description: "A speaker session on cybersecurity by Arvind Gupta, Business Information and Security Officer, Head of Security at SAP."
+    additional_details:
+      speaker: "Arvind Gupta, Business Information and Security Officer, Head of Security, SAP"
+      why_attend:
+        - "Career in Cyber Security, what are the current trends"
+        - "The two pillars of product development: quality and security"
+        - "Cross your boundaries beyond your role."
+      target_audience: "2nd & 3rd Year Students of ECE, EEE & CSE must attend."
+  - name: "CIRCUIT AND LOGIC DESIGN (CLD) WORKSHOP"
+    image: "images/cld1.jpg"
+    description: "IETE BIT Mesra Students' Chapter, conducts the Circuit Logic Design Workshop to introduce the students to the fascinating world of electronics."
+    additional_details:
+      details: "The three day Circuit Logic and Design workshop garners a lot of success as curious students participate in huge numbers. Moreover, it has many interesting and innovative ideas about circuit design."
+
+  - name: "PROGRAMMABLE LOGIC CONTROLLER (PLC)"
+    image: "images/plc1.jpg"
+    description: "To make the students familiar with how mega factories work, IETE BIT Mesra Students' Chapter conducts a workshop on PLC- Programmable Logic Controller."
+    additional_details:
+      details: "This workshop acquaints the attendees with programming and simulation at the industrial level."
+
+  - name: "MACHINE LEARNING WORKSHOP"
+    image: "images/plc.jpg"
+    description: "Machine learning has become one of the most sought after skills in today's data driven world. It has the power to impact the lives of everyone on the planet in nearly every aspect of their daily lives."
+    additional_details:
+      details: "So, every year IETE BIT Mesra endeavours to acquaint the attendees with this incredible technology in a simple, understandable manner."
+
+  - name: "INDUSTRIAL VISIT"
+    image: "images/ind.jpg"
+    description: "Aimed at testing the circuital knowledge of students, Circuital Aptitude Tests provide a fair idea as to where they stand in the quest for their dream job."
+    additional_details:
+      details: "It is practised in a simulated environment along with the entire college and top performers get accreditation from IETE."
+
+  - name: "CIRCUITAL APTITUDE TESTS"
+    image: "images/cat1.jpg"
+    description: "Aimed at testing the circuital knowledge of students, Circuital Aptitude Tests provide a fair idea as to where they stand in the quest for their dream job."
+    additional_details:
+      details: "It is practised in a simulated environment along with the entire college and top performers get accreditation from IETE."
+
+  - name: "TECHNOSIGHT"
+    image: "images/ts1.jpg"
+    description: "Its a fun based event that tests the coordination and understanding between the two members of the team where one is blindfolded and the other has to assist in tracing a small car through a complex maze in the minimum possible time."
+    additional_details:
+      details: null
+
+  - name: "FACTS AND FURIOUS"
+    image: "images/ff.jpg"
+    description: "This is a memory game comprising of a brain-wracking quiz based on a set of technology related videos. The next round is a group discussion on popular topics like the Artificial intelligence."
+    additional_details:
+      details: null
+
+  - name: "THE UNCERTAINTY CONUNDRUM"
+    image: "images/UC.jpg"
+    description: "This is a treasure hunt with riddles related to electronic and electrical items around the campus; usually preceded by a puzze solving qualifying round."
+    additional_details:
+      details: null
+
+  - name: "CRIMINAL CASE"
+    image: "images/crc.jpg"
+    description: "This is an unconventional treasure hunt where the riddles form the clues to an unnerving case of murder mystery."
+    additional_details:
+      details: null
+  - name: "DETECTIVE DAVID"
+    image: "images/detective/Screenshot 2021-08-06 at 7.22.01 PM.png"
+    description: "Detective David is an exciting and thrilling event where we get an opportunity to wear the shoes of a detective and help our superstar Detective David, to solve and puzzle out several intoxicating cases."
+    additional_details:
+      details: null

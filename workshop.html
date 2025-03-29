@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Events by IETE</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Jua|Luckiest+Guy|Patua+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Hanalei+Fill|Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+    
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        h1.hfont {
+            font-size: 3em;
+            color: #000;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .event-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .event-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+            color: black; /* Set event card text color to black */
+        }
+
+        .event-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .event-card p {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body id="top">
+
+    <header id="header">
+        <div class="container">
+            <div id="logo" class="pull-left">
+                <h1><a href="#top">IETE</a></h1>
+            </div>
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Team.html">Team</a></li>
+                    <li><a href="Alumni-new.html">Alumni</a></li>
+                    <li class="menu-active"><a href="#">Events</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                </ul>
+            </nav><!-- #nav-menu-container -->
+        </div>
+    </header><!-- #header -->
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            
+            <!-- UPCOMING EVENTS -->
+            <section id="upcoming-events">
+                <h1 class="hfont">UPCOMING EVENTS</h1>
+                <div id="upcoming-events-container" class="event-container"></div>
+            </section>
+
+            <!-- PAST EVENTS -->
+            <section id="past-events" style="margin-top: 40px;">
+                <h1 class="hfont">PAST EVENTS</h1>
+                <div id="past-events-container" class="event-container"></div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- JavaScript to load and process YAML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script>
+        async function loadYamlFile(filePath) {
+            try {
+                const response = await fetch(filePath);
+                const yamlText = await response.text();
+                const data = jsyaml.load(yamlText);
+
+                const currentDate = new Date('2025-03-29T18:55:00'); // Current date in ISO format
+                const upcomingEventsContainer = document.getElementById('upcoming-events-container');
+                const pastEventsContainer = document.getElementById('past-events-container');
+
+                data.events.forEach(event => {
+                    const eventDate = new Date(event.date); // Parse event date
+                    const isUpcoming = eventDate >= currentDate;
+                    const eventCard = createEventCard(event, isUpcoming,formatDate(eventDate));
+
+                    if (isUpcoming) {
+                        upcomingEventsContainer.innerHTML += eventCard;
+                    } else {
+                        pastEventsContainer.innerHTML += eventCard;
+                    }
+                });
+                console.log(data)
+            } catch (error) {
+                console.error("Error loading YAML file:", error);
+            }
+        }
+
+        function replaceNullWithDash(value) {
+            return (value === null || value === undefined) ? '-' : value;
+        }
+        function formatDate(date) {
+            const dd = String(date.getDate()).padStart(2, '0');
+            const mm = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+            const yyyy = date.getFullYear();
+            return `${dd}-${mm}-${yyyy}`;
+        }
+        function createEventCard(event, isUpcoming, date) {
+            let dateTimeVenue = '';
+
+            if (isUpcoming) {
+                dateTimeVenue = `
+                    <p style="color: black;">Date: ${date}</p>
+                    <p style="color: black;">Time: ${replaceNullWithDash(event.time)}</p>
+                    <p style="color: black;">Venue: ${replaceNullWithDash(event.venue)}</p>
+                    `;
+            }
+
+            return `
+                <div class="event-card" style="color: black;">
+                ${event.image ? `<img src="${event.image}" alt="${event.name}" style="width:100%; border-radius: 8px; margin-bottom: 10px;">` : ''}
+                <h3 style="color: black;">${event.name}</h3>
+                <p style="color: black;">${event.description}</p>
+                ${dateTimeVenue}
+                </div>
+                `;
+        }
+
+        // Load the Event.yaml file
+        loadYamlFile('Event.yaml');
+    </script>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong>2025</strong>. All Rights Reserved.
+            </div>
+        </div>
+    </footer><!-- #footer -->
+
+</body>
+
+</html>

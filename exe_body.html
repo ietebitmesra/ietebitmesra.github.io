@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Body</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <style>
+        .member {
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .pic img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .social a {
+            margin: 0 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="row" id="executive-body"></div>
+
+    <script>
+        async function loadYAML() {
+            const response = await fetch('exe_body.yml'); // Ensure 'members.yaml' is in the same directory
+            const yamlText = await response.text();
+            const data = jsyaml.load(yamlText);
+            
+            console.log(data)
+            const container = document.getElementById('executive-body');
+            data.executive_body.members.forEach(member => {
+                const memberHTML = `
+                    <div class="col-lg-3 col-md-6">
+                        <div class="member">
+                            <div class="pic"><img src="${member.picture}" alt=""></div>
+                            <h4>${member.name || 'N/A'}</h4>
+                            <span>${member.designation}</span>
+                            <div class="social">
+                                ${member.email ? `<a href="mailto:${member.email}"><i class="fa fa-envelope" title="${member.email}"></i></a>` : ''}
+                                ${member.instagram ? `<a href="${member.instagram}"><i class="fa fa-instagram"></i></a>` : ''}
+                                ${member.linkedin ? `<a href="${member.linkedin}"><i class="fa fa-linkedin"></i></a>` : ''}
+                                ${member.facebook ? `<a href="${member.facebook}"><i class="fa fa-facebook"></i></a>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += memberHTML;
+            });
+        }
+
+        loadYAML();
+    </script>
+</body>
+</html>

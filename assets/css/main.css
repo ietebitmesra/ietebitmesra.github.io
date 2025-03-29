@@ -2016,4 +2016,37 @@ figure.snip1206.hover figcaption p {
   font-size: 13px;
   color: #ccc;
 }
+ 
+/*--------------------
+ *Event Card styles 
+ * ---/
 
+ 
+.event-card {
+    /* Keep existing styles */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    color: black;
+}
+
+.event-card h3 {
+    /* Keep existing styles */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.event-card p {
+    /* Keep existing styles */
+    margin-bottom: 10px;
+    color: black;
+}
+
+.event-card strong {
+    /* Keep existing styles */
+    color: black;
+}
+ 
