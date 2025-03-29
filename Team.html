@@ -26,7 +26,8 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
-
+  <!-- YAML LOADER -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 </head>
 
 <body>
@@ -72,6 +73,41 @@
         <br />
         <br />
         <div class="row">
+
+
+    <div class="row" id="executive-body"></div>
+
+    <script>
+        async function loadYAML() {
+            const response = await fetch('exe_body.yml'); // Ensure 'members.yaml' is in the same directory
+            const yamlText = await response.text();
+            const data = jsyaml.load(yamlText);
+            
+            console.log(data)
+            const container = document.getElementById('executive-body');
+            data.executive_body.members.forEach(member => {
+                const memberHTML = `
+                    <div class="col-lg-3 col-md-6">
+                        <div class="member">
+                            <div class="pic"><img src="${member.picture}" alt=""></div>
+                            <h4>${member.name || 'N/A'}</h4>
+                            <span>${member.designation}</span>
+                            <div class="social">
+                                ${member.email ? `<a href="mailto:${member.email}"><i class="fa fa-envelope" title="${member.email}"></i></a>` : ''}
+                                ${member.instagram ? `<a href="${member.instagram}"><i class="fa fa-instagram"></i></a>` : ''}
+                                ${member.linkedin ? `<a href="${member.linkedin}"><i class="fa fa-linkedin"></i></a>` : ''}
+                                ${member.facebook ? `<a href="${member.facebook}"><i class="fa fa-facebook"></i></a>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += memberHTML;
+            });
+        }
+
+        loadYAML();
+    </script>
+
           <!-- <div class="col-lg-3 col-md-6">
             <div class="member">
               <div class="pic"><img src="img/rj.png" alt=""></div>
@@ -84,6 +120,9 @@
               </div>
             </div>
           </div>
+
+
+
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
@@ -233,7 +272,7 @@
               </div>
             </div>
           </div> -->
-
+          <!--
           <div class="col-lg-3 col-md-6">
             <div class="member">
               <div class="pic"><img src="Assets 2023/Aryan.jpg" alt=""></div>
@@ -397,8 +436,7 @@
             </div>
           </div>
 
-          
-        
+          --> 
 
         <!-- <div class="col-lg-3 col-md-6">
             <div class="member">
