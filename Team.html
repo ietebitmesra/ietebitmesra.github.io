@@ -49,7 +49,7 @@
           <li><a href="index.html">Home</a></li>
           <li class="menu-active"><a href="#">Team</a></li>
           <li><a href="Alumni-new.html">Alumni</a></li>
-          <li><a href="workshops.html">Workshops</a></li>
+          <li><a href="workshop.html">Workshops</a></li>
           <li><a href="#">Gallery</a></li>
           <li><a href="Projects.html">Projects</a></li>
           <!-- <li><a href="Detective-david.html">Detective David</a></li> -->
@@ -118,12 +118,18 @@
             const current = document.getElementById('executive-body');
             const former = document.getElementById('former-executive-body');
 
+            const title = document.querySelector('.section-title'); // Selects the first matching element
+            if (title) {
+                title.textContent = current.style.display === 'none' ? "Executive" : "Former Executive";
+            }
             if (current.style.display === 'none') {
                 current.style.display = 'flex';
                 former.style.display = 'none';
+                title.textContent = "Executive"
             } else {
                 current.style.display = 'none';
                 former.style.display = 'flex';
+                title.textContent = "Former Executive"
             }
         }
 

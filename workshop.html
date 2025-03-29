@@ -120,9 +120,9 @@
                 const pastEventsContainer = document.getElementById('past-events-container');
 
                 data.events.forEach(event => {
-                    const eventDate = new Date(event.date.replace('📅 ', '')); // Parse event date
+                    const eventDate = new Date(event.date); // Parse event date
                     const isUpcoming = eventDate >= currentDate;
-                    const eventCard = createEventCard(event, isUpcoming);
+                    const eventCard = createEventCard(event, isUpcoming,formatDate(eventDate));
 
                     if (isUpcoming) {
                         upcomingEventsContainer.innerHTML += eventCard;
@@ -139,18 +139,31 @@
         function replaceNullWithDash(value) {
             return (value === null || value === undefined) ? '-' : value;
         }
+        function formatDate(date) {
+            const dd = String(date.getDate()).padStart(2, '0');
+            const mm = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+            const yyyy = date.getFullYear();
+            return `${dd}-${mm}-${yyyy}`;
+        }
+        function createEventCard(event, isUpcoming, date) {
+            let dateTimeVenue = '';
 
-        function createEventCard(event, isUpcoming) {
+            if (isUpcoming) {
+                dateTimeVenue = `
+                    <p style="color: black;">Date: ${date}</p>
+                    <p style="color: black;">Time: ${replaceNullWithDash(event.time)}</p>
+                    <p style="color: black;">Venue: ${replaceNullWithDash(event.venue)}</p>
+                    `;
+            }
+
             return `
                 <div class="event-card" style="color: black;">
                 ${event.image ? `<img src="${event.image}" alt="${event.name}" style="width:100%; border-radius: 8px; margin-bottom: 10px;">` : ''}
-                    <h3 style="color: black;">${event.name}</h3>
-                    <p style="color: black;">${event.description}</p>
-                    <p style="color: black;">Date: ${event.date}</p>
-                    <p style="color: black;">Time: ${replaceNullWithDash(event.time)}</p>
-                    <p style="color: black;">Venue:> ${replaceNullWithDash(event.venue)}</p>
-                    ${isUpcoming ? `<a href="${event.registration_link.replace('🔗 ', '')}" class="button">Register Now</a>` : ''}
-                </div>`;
+                <h3 style="color: black;">${event.name}</h3>
+                <p style="color: black;">${event.description}</p>
+                ${dateTimeVenue}
+                </div>
+                `;
         }
 
         // Load the Event.yaml file
